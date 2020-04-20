@@ -3,7 +3,6 @@ WORKDIR /app
 COPY . .
 RUN apk add tree && tree /app
 RUN sh /app/update-repo.sh && \
-export phpverx=$(alpinever=$(cat /etc/alpine-release|cut -d '.' -f1);[ $alpinever -ge 9 ] && echo  7|| echo 5) && \
 apk update && \
-apk add --no-cache apache2 php$phpverx-apache2 
+apk add --no-cache apache2 php7-apache2 
 CMD tail -f /dev/null
