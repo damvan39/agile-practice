@@ -1,5 +1,5 @@
 echo "called sucsessfully"
-cp /data/monit-web.conf /etc/monitrc
+cp monit-web.conf /etc/monitrc
 chmod 700 /etc/monitrc
 mkdir /var/run/monit/
 echo $CI
