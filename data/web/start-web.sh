@@ -1,5 +1,6 @@
 echo "called sucsessfully"
 cp /data/monit-web.conf /etc/monitrc
+echo $CI
 if [ $CI ] ; then
     echo "test mode"
     monit -t
