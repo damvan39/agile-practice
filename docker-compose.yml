@@ -1,7 +1,7 @@
 version: '3'
 services:
-  Frontend:
-    container_name: Frontend
+  frontend:
+    container_name: frontend
     environment:
       - CI
     build: Dockerfiles/Frontend
