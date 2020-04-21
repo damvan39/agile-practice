@@ -1,9 +1,9 @@
 echo "called sucsessfully"
 cp /data/monit-web.conf /etc/monitrc
 if monit -t; then
-    echo "if"
+    echo "config fine"
 else
-    echo "else"
+    exit 1
 fi
 monit -i
 sleep 10
