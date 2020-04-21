@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     container_name: web
-    build: .Dockerfiles/Frontend
+    build: Dockerfiles/Frontend
     ports:
       - "80:8080"
     volumes:
