@@ -14,5 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Frontend test
-      run: docker-compose run frontend "/bin/sh web-start.sh"
+      run: docker-compose run frontend "./web-start.sh"
 
