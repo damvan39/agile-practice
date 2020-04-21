@@ -13,6 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build And Test
-      run: docker-compose up run /bin/sh web-start.sh
+    - name: Frontend test
+      run: docker-compose run Frontend "/bin/sh web-start.sh"
 
