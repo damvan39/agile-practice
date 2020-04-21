@@ -1,5 +1,5 @@
 echo "called sucsessfully"
-cp monit-web.conf /etc/monitrc
+cp monit-frontend.conf /etc/monitrc
 chmod 700 /etc/monitrc
 mkdir /var/run/monit/
 echo $CI
@@ -7,7 +7,7 @@ if [ $CI ] ; then
     echo "test mode"
     monit start all
     sleep 3
-    wget localhost:80
+    wgt localhost:80
     if [ $? -eq 0 ]
     then
         echo "SUCCESS"
