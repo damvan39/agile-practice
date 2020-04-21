@@ -17,5 +17,5 @@ if [ $CI ] ; then
     fi    
     exit 0
 fi
-monit -I start server
+monit -I start all
 exit 0
