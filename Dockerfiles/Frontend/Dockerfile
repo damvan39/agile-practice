@@ -1,6 +1,5 @@
 FROM alpine
 WORKDIR /app
-COPY . .
 RUN apk add tree && tree /app
 RUN sh /data/web/update-repo.sh && \
 apk update && \
