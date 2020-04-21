@@ -9,5 +9,5 @@ services:
       - "8080:80"
       - "2812:2812"
     volumes:
-      - ./data/web:/data
+      - ./data/frontend:/data
     
