@@ -17,6 +17,6 @@ if [ $CI ] ; then
     fi    
     exit 0
 fi
-echo "starting" & sleep1 10 && monit start all
+echo "starting" & sleep 10 && monit start all
 monit -I
 exit 0
