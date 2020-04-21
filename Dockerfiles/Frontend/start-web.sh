@@ -14,7 +14,7 @@ if [ $CI ] ; then
     else
         echo "unable to reach port 80 FALILED"
         exit 1
-    fi    
+    fi 
     exit 0
 fi
 echo "starting" & monit start all
