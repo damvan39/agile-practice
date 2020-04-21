@@ -1,2 +1,4 @@
 echo "called sucsessfully"
-sleep 10
+cp /data/web/monit-web.conf /etc/monitrc
+monit -t
+monit -i
