@@ -11,6 +11,6 @@ To run, simply clone the repo, cd into the directory, and use docker compose
 #### 
 ````
 git clone https://github.com/damvan39/agile-practice.git && \
-cd agile-practice.git && \
+cd agile-practice && \
 docker-compose up &
 ````
