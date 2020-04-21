@@ -4,7 +4,7 @@ chmod 700 /etc/monitrc
 mkdir /var/run/monit/
 echo $CI
 if [ $CI ] ; then
-    echo "test mode"
+    echo "***************************TEST MODE***************************"
     monit start all
     sleep 3
     wget localhost:80
