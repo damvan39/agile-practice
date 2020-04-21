@@ -4,7 +4,7 @@ services:
     container_name: web
     build: Dockerfiles/Frontend
     ports:
-      - "80:8080"
+      - "8080:80"
     volumes:
       - ./data/web:/data
     
