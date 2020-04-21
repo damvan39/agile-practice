@@ -7,5 +7,5 @@ if [ $CI ] ; then
     sleep 3
     exit 0
 fi
-monit -i
+monit -I
 exit 0
