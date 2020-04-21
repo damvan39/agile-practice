@@ -5,6 +5,7 @@ services:
     build: Dockerfiles/Frontend
     ports:
       - "8080:80"
+      - "2812:2812"
     volumes:
       - ./data/web:/data
     
