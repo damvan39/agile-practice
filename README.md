@@ -10,7 +10,7 @@ Password: admin
 To run, simply clone the repo, cd into the directory, and use docker compose
 #### 
 ````
-git clone --branch stable https://github.com/damvan39/agile-practice.git && \
-cd agile-practice && \
-sudo docker-compose up --force-recreate &
+git clone --branch stable https://github.com/damvan39/agile-practice.git
+cd agile-practice
+docker-compose up --force-recreate
 ````
