@@ -1,7 +1,7 @@
 FROM alpine
 WORKDIR /app
 RUN apk add tree && tree /app
-RUN sh /data/web/update-repo.sh && \
+RUN sh /data/update-repo.sh && \
 apk update && \
 apk add --no-cache apache2 php7-apache2 
 CMD /bin/sh /data/start-web.sh
