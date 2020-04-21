@@ -2,7 +2,6 @@ echo "called sucsessfully"
 cp monit-frontend.conf /etc/monitrc
 chmod 700 /etc/monitrc
 mkdir /var/run/monit/
-echo $CI
 if [ $CI ] ; then
     echo "***************************TEST MODE***************************"
     monit start all
