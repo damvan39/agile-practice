@@ -12,5 +12,5 @@ To run, simply clone the repo, cd into the directory, and use docker compose
 ````
 git clone --branch stable https://github.com/damvan39/agile-practice.git
 cd agile-practice
-sudo docker-compose up --force-recreate &
+docker-compose up --force-recreate
 ````
