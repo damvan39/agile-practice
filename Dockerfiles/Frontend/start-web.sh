@@ -1,6 +1,9 @@
 echo "called sucsessfully"
 if [ $CI ] ; then
     echo "***************************TEST MODE***************************"
+    cp monit-frontend.conf /etc/monitrc
+    chmod 700 /etc/monitrc
+    mkdir /var/run/monit/
     monit start all
     sleep 3
     wget localhost:80
