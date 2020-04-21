@@ -8,7 +8,7 @@ if [ $CI ] ; then
     monit
     sleep 3
     wget localhost:80
-    if [ &? -eq 0 ]
+    if [ $? -eq 0 ]
     then
         echo "SUCCESS"
     else
