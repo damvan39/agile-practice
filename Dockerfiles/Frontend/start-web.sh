@@ -18,4 +18,5 @@ if [ $CI ] ; then
     exit 0
 fi
 monit -I
+tail -f /dev/null
 exit 0
