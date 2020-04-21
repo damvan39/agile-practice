@@ -2,6 +2,8 @@ version: '3'
 services:
   web:
     container_name: web
+    environment:
+      - CI
     build: Dockerfiles/Frontend
     ports:
       - "8080:80"
