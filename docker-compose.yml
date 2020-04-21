@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web:
+  Frontend:
     container_name: Frontend
     environment:
       - CI
