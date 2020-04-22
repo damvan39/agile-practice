@@ -20,7 +20,8 @@ fi
 echo $nfirst
 if [ $NFIRST ] ; then
     echo "Detected not first run"
-    tail -f /dev/null
+    monit -I
+    monit stop all
 
     else 
     echo "first run"
@@ -35,7 +36,7 @@ export NFIRST
 
 while true
 do
-    echo "entered loop"
+    echo "entered emergency loop"
     monit -I
     monit stop all
 done
