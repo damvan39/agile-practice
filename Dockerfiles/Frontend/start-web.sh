@@ -10,6 +10,7 @@ if [ $CI ] ; then
     if [ $? -eq 0 ]
     then
         echo "SUCCESS"
+        rm index.html
     else
         echo "unable to reach port 80 FALILED"
         exit 1
