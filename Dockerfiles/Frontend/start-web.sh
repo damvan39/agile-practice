@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "called sucsessfully"
 if [ $CI ] ; then
     echo "***************************TEST MODE***************************"
@@ -17,27 +18,17 @@ if [ $CI ] ; then
     fi 
     exit 0
 fi
-echo $nfirst
-if [ $NFIRST ] ; then
-    echo "Detected not first run"
-    monit -I
-    monit stop all
+trap 'echo "stopping" && monit stop all && echo success && exit 0' 2 15 
 
-    else 
-    echo "first run"
-    cp monit-frontend.conf /etc/monitrc
-    chmod 700 /etc/monitrc
-    mkdir /var/run/monit/
-    echo "starting" 
-    monit start all
-    fi
-NFIRST="True"
-export NFIRST
-
-while true
+echo 'starting monit'
+monit
+monit start all
+while :
 do
-    echo "entered emergency loop"
-    monit -I
-    monit stop all
+    echo 'sleeping'
+    sleep 10 &
+    wait $!
+    monit
+    monit start all
 done
-
+exit 1
